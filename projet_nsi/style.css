@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: "segoe ui";
+    background-color: #dcdcdc;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    flex: 1;
+}
+
+h1 {
+    font-size: 2em;
+    color: #000000;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 20px;
+}
+
+.box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 10px;
+    border: 1px solid #484848;
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="button"] {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 8px auto;
+    padding: 10px 15px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.2s ease;
+}
+
+input[type="button"]:hover {
+    background-color: #625f5f;
+    transform: scale(1.05);
+}
+
+.graph-container {
+    width: 40%;
+    min-width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+@media (max-width: 900px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+    .graph-container {
+        width: 90%;
+        margin-top: 20px;
+    }
+    .container {
+        width: 100%;
+    }
+}
+
+.footer {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.85em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    /* cursor: pointer; */
+    margin-right: 11px;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container,
+.graph-container,
+.box,
+.footer {
+    animation: fadeIn 1s ease-out forwards;
+}

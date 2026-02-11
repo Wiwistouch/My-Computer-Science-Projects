@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet NSI</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Projet NSI</h1>
+    <div class="box">
+        <form name="liste_donne">
+            <label>Liste : </label>
+            <input type="text" name="liste">
+            <input type="button" onclick="liste_user()" value="Afficher liste">
+            <input type="button" onclick="liste_user_triee()" value="Afficher liste triée">
+            <input type="button" onclick="anim_liste_user()" value="Animation liste triee">
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="box">
+        <form name="alea_liste">
+            <label>Longueur de la liste :</label>
+            <input type="number" name="longueur">
+            <label>Minimum de la liste :</label>
+            <input type="number" name="minimum">
+            <label>Maximum de la liste :</label>
+            <input type="number" name="maximum">
+            <input type="button" name="bouton" onclick="liste_random()" value="Liste aléatoire">
+            <input type="button" onclick="liste_alea_triee()" value="Liste aléatoire triée">
+            <input type="button" onclick="anim_liste_alea()" value="Animation liste alea">
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="graph-container">
+        <h2>Graphique</h2>
+        <canvas id="myChart"></canvas>
+    </div>
+</body>
+<footer class="footer">
+    <p>© 2025 Projet NSI – Tous droits réservés</p>
+</footer>
+<script src="generale.js"></script>
+
+</html>
